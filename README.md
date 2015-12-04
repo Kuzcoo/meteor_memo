@@ -10,7 +10,7 @@ So I decide to write on the paper (well on an HTML marked up page), what I have 
 Setting everything's up
 -----------------------
 
-• Okay, let's create this meteor project:
+• Create project:
 ```shell
 meteor create my_project
 cd $_
@@ -26,12 +26,12 @@ rm my_project*
 mkdir client server public private collections routes
 ```
 
-• Adding a router:
+• Add a router:
 ```shell
 meteor add iron:router
 ```
 
-• Removing unsafe packages
+• Remove unsafe packages
 ```shell
 meteor remove insecure autopublish
 ```
@@ -47,7 +47,7 @@ First, write some template to show.
 touch client/home.{jade,js}
 ```
 
-We creating a js file with the same name since we may need need it later.
+We create a js file with the same name because we may need it later.
 
 ```jade
 template(name='home')

@@ -72,7 +72,7 @@ Since we removed `autopublish` and `insecure` we have to know at least two thing
 
 Since we removed the autopublish package, we can't GET any data from the database.
 
-Solution: Add a "publisher" server-side to authorize any subscriber to retrive some data. In the same time add a "subscriber" client-side to subscribe to this publisher.
+Solution: Add a "publisher" server-side to authorize any subscriber to retrieve some data. In the same time add a "subscriber" client-side to subscribe to this publisher.
 
 First, we create some files in the right place:
 ```shell

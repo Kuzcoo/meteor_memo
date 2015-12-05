@@ -1,7 +1,7 @@
 A default route
 --------------
 
-We need to provide a route for our home template. This will be our default landing page.
+We need to provide routes to display our templates. The first route we write is the default one, where we're landing when we go to '/'.
 
 First, write some template to show.
 

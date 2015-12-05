@@ -1,3 +1,0 @@
-A restricted route
-------------------
-

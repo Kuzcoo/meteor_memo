@@ -8,8 +8,8 @@ Table of Contents
     1. [Subscribe and publish](autopublish_insecure.md#1-subscribe-and-publish)
     2. [Methods](autopublish_insecure.md#2-methods)
   * [Accounting](accounting.md)
-    1. [Basic set up](accounting.md#i-accounting-and-routing)
-    2. [Restricted route and auth](accounting.md#ii-authentication)
+    1. [Templating and routing](accounting.md#i-templating-and-routing)
+    2. [Authentication](accounting.md#ii-authentication)
 
 Introduction
 ------------

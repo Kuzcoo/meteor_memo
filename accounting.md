@@ -23,7 +23,7 @@ What do we need now ? Let's write a list:
 
 
 
-### Basic set up
+### 1. Basic set up
 
 Writing this memo, seems that meteor is obsessed with templates. That must be the core stuff of its process. Template word everywhere, you'll see!
 
@@ -76,7 +76,7 @@ Template.admin.events({
 });
 ```
 
-### Routes
+### 2. Routes
 
 ```js
 // ./routes/index.js

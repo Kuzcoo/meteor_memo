@@ -2,7 +2,7 @@
 
 Table of Contents
   * [Introduction](#introduction)
-  * [Setting everything up](#setting-everything-up)
+  * [Set up](set_up.md)
   * [Basic route](basic_routes.md)
   * [Result of removing autopublish and insecure](autopublish_insecure.md)
   * [Accounting](accounting.md)

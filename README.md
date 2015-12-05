@@ -1,11 +1,11 @@
 #Meteor, starting the right way
 
 Table of Contents
-  *[Introduction]()
-  *[Setting everything up]()
-  *[Basic route]()
-  *[Result of removing autopublish and insecure]()
-  *[Accounting]()
+  * [Introduction]()
+  * [Setting everything up]()
+  * [Basic route]()
+  * [Result of removing autopublish and insecure]()
+  * [Accounting]()
 
 Introduction
 ------------

@@ -1,7 +1,8 @@
 A default route
 --------------
 
-We need to provide routes to display our templates. The first route we write is the default one, where we're landing when we go to '/'.
+We need to provide routes to display our templates. 
+The first route we write is the default one, where we're landing when we go to '/'.
 
 First, write some template to show.
 

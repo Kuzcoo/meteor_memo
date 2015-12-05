@@ -1,4 +1,3 @@
-```
 Result of removing "autopublish" and "insecure"
 ----------------------------------------------
 

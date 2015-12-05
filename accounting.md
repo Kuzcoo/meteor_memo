@@ -13,7 +13,15 @@ Let's add this package:
 meteor add accounts-password
 ```
 
-And now, front side, we need at least a login page and an admin page. We'll land in the latter if we auth with success and in the former if we failed.
+What do we need now ? Let's write a list:
+  1. Login template
+  2. Admin template
+  3. Route to login template
+  4. Route to admin template
+  5. Create account
+  6. Handling submit from login
+
+
 
 ### Templating (again)
 
@@ -67,3 +75,27 @@ Template.admin.events({
   }
 });
 ```
+
+### Routes
+
+```js
+// ./routes/index.js
+// following the first route defined
+Router.route('/login', {
+  template: 'login'
+});
+
+Router.route('/admin', {
+  template: 'admin'
+});
+```
+
+### Create account
+
+
+### Login submit event
+
+
+
+
+

@@ -3,9 +3,10 @@
 Table of Contents
   * [Introduction](#introduction)
   * [Set up](set_up.md)
-  * [Basic route](basic_routes.md)
+  * [A default route](default_route.md)
   * [Result of removing autopublish and insecure](autopublish_insecure.md)
   * [Accounting](accounting.md)
+  * [A restricted route](restrcited_route.md)
 
 Introduction
 ------------

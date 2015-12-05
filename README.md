@@ -1,15 +1,15 @@
 #Meteor, starting the right way
 
 Table of Contents
-  - [Introduction](#introduction)
-  - [Set up](set_up.md)
-  - [A default route](default_route.md)
-  - [Result of removing autopublish and insecure](autopublish_insecure.md)
-	- [Subscribe and publish](autopublish_insecure.md#1-subscribe-and-publish)
-	- [Methods](autopublish_insecure.md#2-methods)
-  - [Accounting](accounting.md)
-  -	[Basic set up](accounting.md#1-basic-set-up)
- 	- [Restricted route and auth](accounting.md#2-restricted-route-and-auth)
+  * [Introduction](#introduction)
+  * [Set up](set_up.md)
+  * [A default route](default_route.md)
+  * [Result of removing autopublish and insecure](autopublish_insecure.md)
+    1. [Subscribe and publish](autopublish_insecure.md#1-subscribe-and-publish)
+    2. [Methods](autopublish_insecure.md#2-methods)
+  * [Accounting](accounting.md)
+    1. [Basic set up](accounting.md#1-basic-set-up)
+    2. [Restricted route and auth](accounting.md#2-restricted-route-and-auth)
 
 Introduction
 ------------

@@ -23,7 +23,7 @@ What do we need now ? Let's write a list:
 
 
 
-### Templating (again)
+### Basic set up
 
 Writing this memo, seems that meteor is obsessed with templates. That must be the core stuff of its process. Template word everywhere, you'll see!
 
@@ -90,10 +90,7 @@ Router.route('/admin', {
 });
 ```
 
-### Create account
-
-
-### Login submit event
+### Restricted route and auth
 
 
 

@@ -32,7 +32,7 @@ Meteor.publish('fetchItems', function () {
 });
 ```
 
-### 2. Writing methods
+### 2. Methods
 
 Client side, we have to call a "method" (basically, it's a function), that is defined server side.
 

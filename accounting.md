@@ -13,21 +13,28 @@ Let's add this package:
 meteor add accounts-password
 ```
 
-What do we need now ? Let's write a list:
-  1. Login template
-  2. Admin template
-  3. Route to login template
-  4. Route to admin template
-  5. A user account
-  6. Submit handler for login
+What do we need now ? Let's write a list divided in two parts:
+
+**I. Templating and routing**
+  * Login template
+  * Admin template
+  * Route to login template
+  * Route to admin template
+
+**II. Authentication**
+  * A user account
+  * Submit handler for login
 
 
 
-### 1. Basic set up
+### I. Templating and routing
 
 Writing this memo, seems that meteor is obsessed with templates. That must be the core stuff of its process. Template word everywhere, you'll see!
 
 So (straight to the jade files, now you're a master with `touch`)
+
+* Login template
+
 ```jade
 // ./client/login.jade
 
@@ -42,7 +49,7 @@ template(name='login')
     input(type='submit')
 ```
 
-Admin template:
+* Admin template:
 ```jade
 template(name='admin')
   h1 Admin Page!
@@ -76,7 +83,7 @@ Template.admin.events({
 });
 ```
 
-### 2. Routes
+* Routes
 
 ```js
 // ./routes/index.js
@@ -90,7 +97,7 @@ Router.route('/admin', {
 });
 ```
 
-  ### Restricted route and auth
+### II. Authentication
 
 
 

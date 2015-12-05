@@ -18,8 +18,8 @@ What do we need now ? Let's write a list:
   2. Admin template
   3. Route to login template
   4. Route to admin template
-  5. Create account
-  6. Handling submit from login
+  5. A user account
+  6. Submit handler for login
 
 
 

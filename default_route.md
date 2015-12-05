@@ -1,7 +1,7 @@
-Basic routes
+A default route
 --------------
 
-Adding routes
+We need to provide a route for our home template. This will be our default landing page.
 
 First, write some template to show.
 

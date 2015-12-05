@@ -25,7 +25,7 @@ And the route:
 Router.route('/', {
   template: 'home'
 });
-
+```
 We can now launch the server:
 ```shell
 meteor

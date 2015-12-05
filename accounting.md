@@ -90,7 +90,7 @@ Router.route('/admin', {
 });
 ```
 
-### Restricted route and auth
+  ### Restricted route and auth
 
 
 

@@ -26,8 +26,13 @@ What do we need now ? Let's write a list divided in two parts:
   * Submit handler for login
 
 
-
 ### I. Templating and routing
+
+* Tests
+  
+  [Work in progress]
+
+----
 
 Writing this memo, seems that meteor is obsessed with templates. That must be the core stuff of its process. Template word everywhere, you'll see!
 

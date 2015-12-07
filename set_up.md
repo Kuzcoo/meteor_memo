@@ -115,7 +115,7 @@ Note that on OS X, we seem to have to use `sudo` for permissions issues.
 
 Now, let's scaffold a nice testing environnement.
 
-```shell
+```bash
 // generate the nigthwatch config file
 starrynight generate-autoconfig
 // before scaffolding we change dir

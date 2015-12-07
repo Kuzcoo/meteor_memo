@@ -28,7 +28,7 @@ Yes, we need to add our own package to our meteor project in order to use it.
 To do so, we have to set an environnement variables, `PACKAGE_DIRS`, to the path of our "packages" directory.
 Here we'll use the "packages" directory of our project for the example.
 ```shell
-export PACKAGE_DIRS='$(pwd)/packages'
+export PACKAGE_DIRS="$(pwd)/packages"
 ```
 
 Now add the package

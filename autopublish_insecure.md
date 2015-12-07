@@ -1,6 +1,8 @@
 Result of removing "autopublish" and "insecure"
 ----------------------------------------------
 
+[Disclaimer: in construction]
+
 Since we removed `autopublish` and `insecure` we have to know at least two things:
   
 1. We can't fetch data from the database
@@ -9,9 +11,12 @@ Since we removed `autopublish` and `insecure` we have to know at least two thing
 
 ### 1. Subscribe and publish
 
+
+• Create a collection
+
 Because we removed the autopublish package, we can't GET any data from the database.
 
-Solution: Add a "publisher" server-side to authorize any subscriber to retrieve some data. In the same time add a "subscriber" client-side to subscribe to this publisher.
+Solution: Add a "publication" server-side to authorize any subscriber to retrieve some data. In the same time add a "subscribtion" client-side to subscribe to this publication.
 
 First, we create some files in the right place:
 ```shell
@@ -35,6 +40,7 @@ Meteor.publish('fetchItems', function () {
 ### 2. Methods
 
 Client side, we have to call a "method" (basically, it's a function), that is defined server side.
+
 
 Create the file:
 ```shell

@@ -67,7 +67,7 @@ meteor
 
 * Start your test:
 ```shell
-starrynight run-tests --framework nightwatch
+starrynight run-tests --framework nightwatch --env phantomjs
 ```
 
 Oh yeah both tests fail.

@@ -4,10 +4,6 @@ A default route
 We need to provide routes to display our templates. 
 The first route we write is the default one, where we're landing when we go to '/'.
 
-First, let's dive into testing. Yes, we will try to follow best practices doing TDD (Test Driven Developpment).
-
-We are using nightwatch launched by starrynight cli utily to drive our tests.
-To spare you a lot of manual configuration, we scaffolded an arborescence where we will put our test in.
 * Defining a route
 
 Create the right file.
@@ -42,7 +38,7 @@ Package.onUse(function(api) {
 });
 
 ````
-* Writing our first test
+* Write our first test
 
 ```js
 // ./tests/nightwatch/walktroughs/appLayout.js

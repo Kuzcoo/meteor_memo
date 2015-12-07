@@ -104,7 +104,7 @@ Here, for unit testing meteor will use tinytest and our app package itself.
 
 
 For end-to-end testing we'll use starrynight with [Nightwatch](http://nightwatchjs.org/), that I found pretty easy to use and configure, and especially because there is valuable [documentation](http://starrynight.meteor.com/testing) and examples, thanks to Abigail Watson, who put a lots of efforts into [meteor-cookbook](https://github.com/awatson1978/meteor-cookbook).
-Furthermore, Night watch offers a quite clear code structure with hidden built-in or custom methods. More on that later.
+Furthermore, Nightwatch offers a quite clear code structure with hidden built-in or custom methods. More on that later.
 
 If you don't have `starrynight` (yes Meteor community is all about night life) yet, I would suggest you to install it globally.
 

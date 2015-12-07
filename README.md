@@ -1,5 +1,5 @@
 #Meteor, starting the right way
-
+[Work in progress]
 Table of Contents
   * [Introduction](#introduction)
   	* [Resources](#resources)

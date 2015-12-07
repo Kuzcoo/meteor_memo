@@ -103,8 +103,8 @@ Package.onTest(function(api) {
 Here, for unit testing meteor will use tinytest and our app package itself.
 
 
-For end-to-end testing we'll use starrynight with nightwatch, that I found pretty easy to use and configure, and especially because there is valuable [documentation](http://starrynight.meteor.com/testing) and examples, thanks to Abigail Watson, who put a lots of efforts into [meteor-cookbook](https://github.com/awatson1978/meteor-cookbook).
-Furthermore, Night watch offers a quite clear code structure with hidden behind built-in or custom methods. More on that later.
+For end-to-end testing we'll use starrynight with [Nightwatch](http://nightwatchjs.org/), that I found pretty easy to use and configure, and especially because there is valuable [documentation](http://starrynight.meteor.com/testing) and examples, thanks to Abigail Watson, who put a lots of efforts into [meteor-cookbook](https://github.com/awatson1978/meteor-cookbook).
+Furthermore, Night watch offers a quite clear code structure with hidden built-in or custom methods. More on that later.
 
 If you don't have `starrynight` (yes Meteor community is all about night life) yet, I would suggest you to install it globally.
 
@@ -125,9 +125,9 @@ starrynight scaffold --framework nightwatch
 ```
 
 By default the path to our "tests" directory is relative to the current dir,
-and it seems `run-tests` only works from the root of the project where it cans locate the "nightwatch.json" file.
+and it seems that `run-tests` only works from the root of the project where it cans locate the "nightwatch.json" file.
 So we edit our 'nightwatch.json' file and with a search and replace we change each path beginning with "./tests/" to "./packages/app/tests/".
 
-If you use Sublime Text you can just select './tests' and select all occurences pressing ctrl+cmd+G (os x). 
+ps: if you use Sublime Text you can just select './tests' and select all occurences pressing ctrl+cmd+G (os x). 
 
 

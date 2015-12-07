@@ -25,7 +25,7 @@ meteor create --package kuzcoo:app
 * Adding our app package to our project
 
 Yes, we need to add our own package to our meteor project in order to use it.
-To do so, we have to set an environnement variables, `PACKAGE_DIRS', to the path of our packages directory.
+To do so, we have to set an environnement variables, `PACKAGE_DIRS`, to the path of our packages directory.
 Here we'll use the "packages" directory of our project for the example.
 ```shell
 export PACKAGE_DIRS='$(pwd)/packages'
@@ -111,7 +111,7 @@ If you don't have `starrynight` (yes Meteor community is all about night life) y
 ```shell
 npm -g install starrynight
 ```
-Note that on OS X, you seem to have to use `sudo` for permissions issues.
+Note that on OS X, we seem to have to use `sudo` for permissions issues.
 
 Now, let's scaffold a nice testing environnement.
 

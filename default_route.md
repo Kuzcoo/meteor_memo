@@ -16,7 +16,7 @@ Okay, with this tiny list let's write our tinytests
 
 // Here we will check the existence of our templates
 Tinytest.add('Check Templates', test => {
-  test.isNotUndefined(typeof Template.home, '"home should exists');
+  test.isNotUndefined(typeof Template.home, '"home" should exists');
 });
 
 // here we will chack our routes

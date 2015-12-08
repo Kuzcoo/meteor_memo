@@ -7,13 +7,92 @@ Since we removed `autopublish` and `insecure` we have to know at least two thing
   
 1. We can't fetch data from the database
 
-2. Client-side, we can't update, insert, or delete to the DB
+2. Client-side, we can't request the DB for "insert", "update", and "delete".
 
 ### 1. Subscribe and publish
 
 
-• Create a collection
+#### Create a collection
+  
+What we nned to do ?
+  1. Create a collection
+  2. Fetch items from that collection
 
+```js
+// ./tests/app-tests.js
+
+Tinytest.add('Checking Collections', test => {
+  test.isNotUndefined(typeof Items);
+  test.equal(typeof Items, 'object');
+});
+```
+
+
+
+Run the tests:
+```bash
+meter test-packages
+```
+
+The test fail. We have to create the collection.
+
+```bash
+touch collections/items.js
+```
+
+```js
+// ./collections/items.js
+
+Items = new Mongo.Collection('items');
+```
+
+Add the file to our 'package' file.
+
+```js
+// ./package.js
+
+Package.onUse(function(api) {
+  api.versionsFrom('1.2.1');
+  api.use('ecmascript');
+  // Adding core dependendies
+  api.use(['templating', 'underscore']);
+  api.use(['mongo'], ['client', 'server']);
+  api.use('iron:router', 'client');
+
+  api.addFiles('collections/.items.js', ['client', 'server']);
+  api.addFiles('routes/index.js', 'client');
+
+});
+````
+
+And export your `Items` global, in order to test it.
+
+```js
+Package.onUse(function(api) {
+  // ...
+
+  api.addFiles('collections/.items.js', ['client', 'server']);
+  api.addFiles('routes/index.js', 'client');
+
+  api.export('Items', ['client', 'server']);
+});
+```
+
+Now tests should pass.
+
+Add some tests.
+
+```js
+// ./tests/app-tests.js
+
+Tinytest.add('We should be able to insert items', test => {
+  Items.insert({name: 'test1', createdAt: new Date()});
+
+  const actual = Items.find().count();
+  const expected = 1;
+  test.equal(actual, expected);
+});
+```
 Because we removed the autopublish package, we can't GET any data from the database.
 
 Solution: Add a "publication" server-side to authorize any subscriber to retrieve some data. In the same time add a "subscribtion" client-side to subscribe to this publication.

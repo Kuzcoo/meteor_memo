@@ -96,8 +96,12 @@ Package.onTest(function(api) {
   api.use('ecmascript');
   api.use('tinytest');
   api.use('app');
+  // to test templates
+  api.use(['templating', 'underscore'], 'client'); 
+  // to test routes
+  api.use('iron:router', 'client');
   // here
-  api.addFiles('tests/app-tests.js');
+  api.addFiles('tests/app-client-tests.js', 'client');
 });
 ```
 Here, for unit testing meteor will use tinytest and our app package itself.
@@ -130,4 +134,12 @@ So we edit our 'nightwatch.json' file and with a search and replace we change ea
 
 ps: if you use Sublime Text you can just select './tests' and select all occurences pressing ctrl+cmd+G (os x). 
 
+* Create an alias for running tests
 
+For convenience we'll just set an alias to run nightwatch tests, because it is quite long.
+
+```bash
+alias run-tests='starrynight run-tests --framework nightwatch --env phantomjs'
+``` 
+
+You'll just have to type `run-tests` to to start your end to end tests now.

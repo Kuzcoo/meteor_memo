@@ -44,9 +44,9 @@ mkdir packages/app/{client,server,collections,routes,tests}
 ```
 Following that [guide](https://meteor-guide.readthedocs.org/en/latest/structure/#structure-of-a-medium-sized-app), I chose a pretty classical structure within my package.
 
-* Moving the test file to our tests directory
+* Moving the test file to our tests directory and rename it
 ```shell
-mv app-tests.js tests/app-tests.js
+mv app-tests.js tests/app-client-tests.js
 ```
 
 * Adding Meteor's core dependencies

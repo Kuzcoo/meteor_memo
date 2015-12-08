@@ -14,12 +14,12 @@ Okay, with this tiny list let's write our tinytests
 ```js
 // ./tests/app-client-tests.js
 
-// Here we will check the existence of our templates
+// here we will check the existence of our templates
 Tinytest.add('Check Templates', test => {
   test.isNotUndefined(typeof Template.home, '"home" should exists');
 });
 
-// here we will chack our routes
+// here we will check our routes
 Tinytest.add('Check Routes', test => {
   test.isNotNull(Router.findFirstRoute('/'), '"/" should exists');
 });
@@ -91,13 +91,13 @@ Package.onUse(function(api) {
 template(name='home')
 ```
 
-Let's see our test on testing tab.
+Let's see our test in our testing browser's window.
 And now they should pass!
 
 
 * Create content of the home template
 
-What do we want in our "home" template.
+What do we want in our "home" template ?
 Just a title for now: "This is the Home Page pal!".
 
 Put it into a test.
@@ -132,6 +132,6 @@ template(name='home')
 ```
 
 
-Run again, and it should pass.
+Run again, and it should pass too.
 
 

@@ -16,7 +16,7 @@ Table of Contents
 Introduction
 ------------
 
-A quick remainder of how to properly set up a MeteorJs app.
+A quick reminder of how to properly set up a MeteorJs app.
 
 
 ### Resources

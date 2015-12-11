@@ -14,24 +14,27 @@ Since we removed `autopublish` and `insecure` we have to know at least two thing
 
 #### Create a collection
   
-What we nned to do ?
+What do we need to do ?
   1. Create a collection
   2. Fetch items from that collection
 
 ```js
-// ./tests/app-tests.js
+// ./tests/app-both.js
 
 Tinytest.add('Checking Collections', test => {
   test.isNotUndefined(typeof Items);
   test.equal(typeof Items, 'object');
 });
 ```
-
+On your testing navigation's window you see twice the same test.
+In fact, one is prefixed with a capital "s" and the other with a cpaital "c".
+The former stand for "server" and the latter for "client". 
+Later we'll show that we can't insert data and so on client side, we wil see the difference of the two tests.
 
 
 Run the tests:
 ```bash
-meter test-packages
+meteor test-packages
 ```
 
 The test fail. We have to create the collection.
@@ -59,7 +62,7 @@ Package.onUse(function(api) {
   api.use(['mongo'], ['client', 'server']);
   api.use('iron:router', 'client');
 
-  api.addFiles('collections/.items.js', ['client', 'server']);
+  api.addFiles('collections/items.js', ['client', 'server']);
   api.addFiles('routes/index.js', 'client');
 
 });
@@ -71,54 +74,48 @@ And export your `Items` global, in order to test it.
 Package.onUse(function(api) {
   // ...
 
-  api.addFiles('collections/.items.js', ['client', 'server']);
+  api.addFiles('collections/items.js', ['client', 'server']);
   api.addFiles('routes/index.js', 'client');
-
+  // epxort
   api.export('Items', ['client', 'server']);
 });
 ```
 
 Now tests should pass.
 
-Add some tests.
-
-```js
-// ./tests/app-tests.js
-
-Tinytest.add('We should be able to insert items', test => {
-  Items.insert({name: 'test1', createdAt: new Date()});
-
-  const actual = Items.find().count();
-  const expected = 1;
-  test.equal(actual, expected);
-});
-```
 Because we removed the autopublish package, we can't GET any data from the database.
+Well, we can't test so far because we have no data in the testing database.
 
-Solution: Add a "publication" server-side to authorize any subscriber to retrieve some data. In the same time add a "subscribtion" client-side to subscribe to this publication.
+Solution: Add a "publication" server-side to authorize any subscriber to retrieve some data. In the same time add a "subscription" client-side to subscribe to this publication.
 
 First, we create some files in the right place:
 ```shell
-touch client/subscribers.js
-touch server/publishers.js
+touch client/subscription.js
+touch server/publications.js
 ```
-Maybe we could find better names for these files.
+
+And then:
 
 ```js
-// subscribers.js
-
+// subscribtions.js
+// make it visible for all our client side
 Meteor.subscribe('fetchItems');
 
-// publishers.js
+// publications.js
 
 Meteor.publish('fetchItems', function () {
   return Items.find({});
 });
 ```
 
+In order to restrict the access of the "fetchItems" publication, we could have route the subscription from the routing file.
+
 ### 2. Methods
 
+First we want to be able to insert data.
 Client side, we have to call a "method" (basically, it's a function), that is defined server side.
+
+What do we need to do ?
 
 
 Create the file:

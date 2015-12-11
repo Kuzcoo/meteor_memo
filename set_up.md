@@ -44,10 +44,13 @@ mkdir packages/app/{client,server,collections,routes,tests}
 ```
 Following that [guide](https://meteor-guide.readthedocs.org/en/latest/structure/#structure-of-a-medium-sized-app), I chose a pretty classical structure within my package.
 
-* Moving the test file to our tests directory and rename it
+* Moving the test file to our tests directory and add two more
 ```shell
 mv app-tests.js tests/app-client-tests.js
+touch tests/app-{server,both}-tests.js
 ```
+
+First file to test the client side, the second to test server side and the third, for testing both.
 
 * Adding Meteor's core dependencies
 ```js
@@ -102,6 +105,8 @@ Package.onTest(function(api) {
   api.use('iron:router', 'client');
   // here
   api.addFiles('tests/app-client-tests.js', 'client');
+  api.addFiles('tests/app-server-tests.js', 'server');
+  api.addFiles('tests/app-both-tests.js', ['client', 'server']);
 });
 ```
 Here, for unit testing meteor will use tinytest and our app package itself.
